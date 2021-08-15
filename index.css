@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  overflow-x: none;
+}
+body {
+  background-color: rgb(226, 226, 226);
+}
+.header-container {
+  width: 100%;
+  background-color: white;
+}
+
+/* Header Items */
+.logo {
+  padding: 20px 0 20px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo span {
+  align-self: center;
+  justify-self: center;
+  font-size: 30px;
+  color: #6db3e5;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.logo span:hover {
+  transform: rotateZ(90deg);
+  color: #053251;
+}
+
+/* 
+=======================
+ */
+/* Hide menu items */
+
+.menu-items {
+  height: 0;
+  overflow: hidden;
+  transition: height 1s ease;
+  list-style-type: none;
+}
+.slide-down {
+  height: 168.6px;
+}
+
+li {
+  margin: 10px 0;
+}
+li:last-child {
+  padding-bottom: 10px;
+}
+.menu-items > li > a {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: #38668b;
+  letter-spacing: 4px;
+  padding: 5px 100% 5px 15px;
+}
+
+li > a:hover {
+  background-color: #a5d5f8;
+  padding-left: 25px;
+  color: #59aeec;
+  transition: all 1s ease;
+}
+
+/* Hide social Icons */
+.social-container {
+  display: none;
+}
+
+/*=================
+  DESKTOP VIEW
+================= */
+@media (min-width: 992px) {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo {
+    width: 20%;
+  }
+  .menu-items,
+  .social-container {
+    width: 40%;
+    align-self: center;
+  }
+  .menu-items {
+    height: 80px;
+    display: flex;
+  }
+  .menu-items > li {
+    align-self: center;
+  }
+  .menu-items > li > a {
+    padding: 0;
+    margin-right: 15px;
+    font-family: "Open Sans", sans-serif;
+    color: #38668b;
+  }
+  ul > li > a:hover {
+    background: none;
+    color: #59aeec;
+    transition: all 0.5s ease;
+  }
+  .social-container {
+    display: block;
+    color: #59aeec;
+    font-size: 20px;
+    width: auto;
+  }
+  .social-items {
+    display: flex;
+    float: right;
+  }
+  .social-items > li {
+    margin: 0 10px;
+  }
+  .social-items > li:hover {
+    cursor: pointer;
+    color: #8bcbf9;
+    transition: all 0.5s ease;
+  }
+  /* Extra CSS for lingering properties */
+  li:last-child {
+    padding: 0;
+  }
+  .logo span {
+    display: none;
+  }
+}
